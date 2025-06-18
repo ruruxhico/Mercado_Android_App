@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Mercado Android App</string>
+    <string name="welcome">Welcome to My First App</string>
+    <string name="name">Danielle Jazmine Aliah N. Mercado</string>
+    <string name="proceed">Proceed</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sigunp">Sign Up</string>
+    <string name="login">Log In</string>
+</resources>
