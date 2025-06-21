@@ -8,13 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class Login : AppCompatActivity() {
-    lateinit var btnSignUp: Button
-    lateinit var btnLogin: Button
+class SignUp : AppCompatActivity() {
+    lateinit var btnGoBack: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_sign_up)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -22,26 +21,13 @@ class Login : AppCompatActivity() {
         }
 
         //bind the layout variable to the layout view (control)
-        btnSignUp = findViewById<Button>(R.id.btnSignUp)
+        btnGoBack = findViewById<Button>(R.id.btnGoBack)
 
         //add the clock listener to the button
-        btnSignUp.setOnClickListener{
+        btnGoBack.setOnClickListener{
             //nag-dadagdag ng listener ng on click
             //create an intent variable
-            val intent = Intent(this, SignUp::class.java)
-
-            //start the activity using the intent
-            startActivity(intent)
-        }
-
-        //bind the layout variable to the layout view (control)
-        btnLogin = findViewById<Button>(R.id.btnLogIn)
-
-        //add the clock listener to the button
-        btnLogin.setOnClickListener{
-            //nag-dadagdag ng listener ng on click
-            //create an intent variable
-            val intent = Intent(this, SignUp::class.java)
+            val intent = Intent(this, Login::class.java)
 
             //start the activity using the intent
             startActivity(intent)

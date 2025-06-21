@@ -7,4 +7,10 @@
     <string name="password">Password</string>
     <string name="sigunp">Sign Up</string>
     <string name="login">Log In</string>
+    <string name="firstname">First Name</string>
+    <string name="middlename">Middle Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="email">Email</string>
+    <string name="confirmpassword">Confirm Password</string>
+    <string name="goback"> Go Back</string>
 </resources>
