@@ -13,4 +13,6 @@
     <string name="email">Email</string>
     <string name="confirmpassword">Confirm Password</string>
     <string name="goback"> Go Back</string>
+    <string name="save"> Save</string>
+    <string name="back"> Back</string>
 </resources>
