@@ -3,6 +3,7 @@ package com.example.mercadoandroidapp
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,6 +11,12 @@ import androidx.core.view.WindowInsetsCompat
 
 class ReviewInfo : AppCompatActivity() {
     lateinit var btnBack: Button
+
+    lateinit var tvLastNameField: TextView
+    lateinit var tvFirstNameField: TextView
+    lateinit var tvMiddleNameField: TextView
+    lateinit var tvEmailField: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -30,6 +37,22 @@ class ReviewInfo : AppCompatActivity() {
 
             //start the activity using the intent
             startActivity(intent)
+        }
+
+        //bind text view
+        tvFirstNameField = findViewById<TextView>(R.id.tvFirstNameField)
+        tvMiddleNameField = findViewById<TextView>(R.id.tvMiddleNameField)
+        tvLastNameField = findViewById<TextView>(R.id.tvLastNameField)
+        tvEmailField = findViewById<TextView>(R.id.tvEmailField)
+
+        val bundle = intent.extras
+
+        //check kung may laman si bundle
+        if(bundle != null){
+            tvFirstNameField.text = bundle.getString("firstName")
+            tvMiddleNameField.text = bundle.getString("middleName")
+            tvLastNameField.text = bundle.getString("lastName")
+            tvEmailField.text = bundle.getString("email")
         }
     }
 }
